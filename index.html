@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/base.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>The Flavors of SVG</h1>
+
+          <p>
+            <small>Created by <a href="http://atendesigngroup.com/about/john-ferris">John Ferris</a> / <a href="https://twitter.com/pixel_whip">@pixel_whip</a></small>
+          </p>
+        </section>
+
+        <section>
+          <img src="img/SVG_logo.svg" alt="SVG Logo" height="500" width="500">
+          <aside class="notes">
+            First and foremost a graphics format.
+            1998 - VML proposed by Microsoft, PGML proposed by IBM, Adobe, Netscape and sun - SVG working group was formed.
+            2001 - Adobe released the SVG Viewer 3
+            2001 - W3C makes a recommendation (41% of Americans were on dial-up. 6% on broadband) internet users were still on dial-up) http://www.pewinternet.org/2013/08/26/home-broadband-2013/
+            2005 - Adobe adopts Flash
+            2006 - Opera 9 is the first browser with native support
+            2008 - Apple blocks Flash from iOS devices
+            2009 - Safari, Firefox then Chrome add support
+            2011 - IE9 is released, marking the last major browser to support
+            2012 - Apple releases retina devices
+            2012 - Microsoft drops support for VML with the release of IE10
+          </aside>
+        </section>
+        <section>
+          <div class="l--stacked">
+            <div class="l-primary">
+              <svg version="1.1" height="200" width="400">
+                <style>text { text-transform: uppercase; font-weight: bold; }</style>
+                <circle r="90" cx="200" cy="100" fill="#FF8C00" stroke="#E48700" stroke-width="5" />
+                <rect x="50" y="60" width="300" height="80" fill="#333" stroke="#555" stroke-width="5"/>
+                <text x="200" y="105" fill="#fff" text-anchor="middle" alignment-baseline="middle">It's Markup!</text>
+              </svg>
+            </div>
+            <div class="l-secondary">
+
+              <pre><code><svg version="1.1" height="200" width="400">
+  <circle r="90" cx="200" cy="100" fill="#FF8C00" stroke="#E48700" stroke-width="5" />
+  <rect x="50" y="60" width="300" height="80" fill="#333" stroke="#555" stroke-width="5"/>
+  <text x="200" y="105" fill="#fff" text-anchor="middle" alignment-baseline="middle">It's Markup!</text>
+</svg></code></pre>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man.svg" alt="kool-aid man" style="transform: scale(2.2) translate(-12%, 12%);">
+            </div>
+            <div class="l-secondary" style="flex-grow: 1;">
+              <h2>SVG Flavor</h2>
+              <ul>
+                <li>Lightweight</li>
+                <li>Scalable</li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+        <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man--smil.svg" alt="kool-aid man">
+            </div>
+            <div class="l-secondary" style="flex-grow: 1;">
+              <h2>SVG Flavor</h2>
+              <ul>
+                <li>Lightweight</li>
+                <li>Scalable</li>
+                <li>SMIL Animation</li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+        <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man--filter.svg" alt="kool-aid man">
+            </div>
+            <div class="l-secondary" style="flex-grow: 1;">
+              <h2>SVG Flavor</h2>
+              <ul>
+                <li>Lightweight</li>
+                <li>Scalable</li>
+                <li>SMIL Animation</li>
+                <li>Filters</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man--purple.svg" alt="kool-aid man">
+            </div>
+            <div class="l-secondary" style="flex-grow: 1;">
+              <h2>SVG Flavor</h2>
+              <ul>
+                <li>Lightweight</li>
+                <li>Scalable</li>
+                <li>SMIL Animation</li>
+                <li>Filters</li>
+                <li>CSS Styling</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          SMIL Animation
+          Synchronized Multimedia Integration Language
+          http://www.w3.org/TR/2001/REC-smil-animation-20010904/
+        </section>
+        <section>
+          CSS
+          <aside class="notes">
+            embedded media queries
+          </aside>
+        </section>
+        <section>
+          Manipulate with JS
+        </section>
+
+        <!-- USES -->
+        <section><h3>Logos</h3></section>
+        <section><h3>Icons</h3></section>
+        <section>
+<img src="img/icons.svg" width="700">
+<p><small>Copyright © Jolly Icons by <a href="http://jollyicons.com/">Olly Holovchenko</a> 2013</small></p>
+        </section>
+        <section>
+<img src="img/icons-github.svg" width="300">
+<p><small>Copyright © Jolly Icons by <a href="http://jollyicons.com/">Olly Holovchenko</a> 2013</small></p>
+        </section>
+        <section>
+<img src="img/icons-social.svg" width="700">
+<p><small>Copyright <a href="http://iconmelon.com/">Roberts OzolinsFlat</a></small></p>
+        </section>
+        <section><h3>Animations</h3></section>
+        <section>
+          <p data-height="700" data-theme-id="0" data-slug-hash="LEorev" data-default-tab="result" data-user="sdras" class='codepen'>See the Pen <a href='http://codepen.io/sdras/pen/LEorev/'>Form with Animation That Assists in UX</a> by Sarah Drasner (<a href='http://codepen.io/sdras'>@sdras</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section><h3>Data Visualization</h3></section>
+        <section data-background="img/bg/the-evolution-of-web.png">
+          <div class="canvas">
+            <a href="http://evolutionofweb.appspot.com/#/evolution/" class="link--external">The Evolution of the Web</a>
+          </div>
+        </section>
+        <section><h3>Non-Rectangular inerfaces</h3></section>
+        <section data-background="img/bg/berkeley-social-science.png">
+          <div class="canvas">
+            <a href="http://matrix.berkeley.edu/" class="link--external">Berkeley Social Science Matrix</a>
+          </div>
+        </section>
+        <section data-background="img/bg/circulus-svg.png">
+          <div class="canvas">
+            <a href="http://sarasoueidan.com/tools/circulus/" class="link--external">Circulus SVG</a>
+          </div>
+        </section>
+
+        <section>
+          <h2>Embed Methods</h2>
+        </section>
+        <section><h2>&lt;img/&gt;</h2></section>
+                <section>
+                  <h2>Picture (with picturefill)</h2>
+
+                  <pre><code>
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source type="image/svg+xml" srcset="img/kool-aid-man.svg">
+          <!--[if IE 9]></video><![endif]-->
+          <img src="img/kool-aid-man.png" alt="Kool Aid Man" />
+        </picture>
+                  </code></pre>
+
+
+                  <aside class="notes">
+                    Using the picture element as a fallback works well in situations where
+                     <ol>
+                      <li>You need to provide different art direction at different breakpoints. Meaning you want to provide different.</li>
+                      <li>Or as a simple fallback when the picturefill polyfill is already in use.</li>
+                     </ol>
+                     Otherwise it's overkill.
+                  </aside>
+                </section>
+        <section><h2>&lt;object/&gt;</h2></section>
+        <section><h2>background-image:</h2></section>
+        <section><h2>&lt;svg/&gt;</h2></section>
+
+        <section>
+          <h2>Tools</h2>
+        </section>
+        <section>
+          <h2>Creating & Editing</h2>
+        </section>
+        <section data-background="img/bg/sublime.png">
+          <div class="canvas">
+            <a href="http://www.sublimetext.com/3" class="link--external">Sublime Text</a>
+          </div>
+        </section>
+        <section data-background="img/bg/illustrator.png">
+          <div class="canvas">
+            <a href="https://www.adobe.com/products/illustrator.html" class="link--external">Adobe Illustrator</a>
+          </div>
+        </section>
+        <section data-background="img/bg/sketch.png">
+          <div class="canvas">
+            <a href="https://www.adobe.com/products/sketch.html" class="link--external">Sketch</a>
+          </div>
+        </section>
+        <section data-background="img/bg/inkscape.png">
+          <div class="canvas">
+            <a href="https://inkscape.org/en/" class="link--external">Inkscape</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>Optimization</h3>
+        </section>
+        <section data-background="img/bg/svg-editor.png">
+          <div class="canvas">
+            <a href="https://petercollingridge.appspot.com/svg-editor" class="link--external">Peter Collingridge's SVG Editor</a>
+          </div>
+        </section>
+        <section data-background="img/bg/svgo.png">
+          <div class="canvas">
+            <a href="https://www.npmjs.com/package/svgo" class="link--external">SVGO</a>
+          </div>
+        </section>
+        <section data-background="img/bg/svgomg.png">
+          <div class="canvas">
+            <a href="https://jakearchibald.github.io/svgomg/" class="link--external">SVGOMG</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>Workflow & Support</h3>
+        </section>
+        <section data-background="img/bg/grunticon.png">
+          <div class="canvas">
+            <a href="http://www.grunticon.com/" class="link--external">Grunticon</a>
+          </div>
+        </section>
+        <section data-background="img/bg/grumpicon.png">
+          <div class="canvas">
+            <a href="http://www.grumpicon.com/" class="link--external">Grumpicon</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>Browser Support</h3>
+        </section>
+        <section data-background="img/bg/svgeezy.png">
+          <div class="canvas">
+            <a href="http://benhowdle.im/svgeezy/" class="link--external">SVGeezy</a>
+          </div>
+        </section>
+        <section data-background="img/bg/svg4everybody.png">
+          <div class="canvas">
+            <a href="https://github.com/jonathantneal/svg4everybody" class="link--external">svg4everybody</a>
+          </div>
+        </section>
+        <section data-background="img/bg/modernizr.png">
+          <div class="canvas">
+            <a href="http://modernizr.com/" class="link--external">Modernizr</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>SVG specific libraries</h3>
+        </section>
+        <section data-background="img/bg/raphael.png">
+          <div class="canvas">
+            <a href="http://raphaeljs.com/" class="link--external">Raphael.js</a>
+          </div>
+        </section>
+        <section data-background="img/bg/snap.png">
+          <div class="canvas">
+            <a href="http://snapsvg.io/" class="link--external">Snap.svg</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>Animation Libraries</h3>
+        </section>
+        <section data-background="img/bg/gsap.png">
+          <div class="canvas">
+            <a href="http://greensock.com/gsap" class="link--external">GSAP</a>
+          </div>
+        </section>
+        <section data-background="img/bg/velocity.png">
+          <div class="canvas">
+            <a href="http://julian.com/research/velocity/" class="link--external">Velocity.js</a>
+          </div>
+        </section>
+        <section><p data-height="700" data-theme-id="0" data-slug-hash="jpecs" data-default-tab="result" data-user="sol0mka" class='codepen'>See the Pen <a href='http://codepen.io/sol0mka/pen/jpecs/'>VelocityJS + SVG = ♡</a> by LegoMushroom (<a href='http://codepen.io/sol0mka'>@sol0mka</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script></section>
+
+        <section>
+          <h3>Data Visualization</h3>
+        </section>
+        <section data-background="img/bg/d3.png">
+          <div class="canvas">
+            <a href="http://d3js.org/" class="link--external">D3 - Data Driven Documents</a>
+          </div>
+        </section>
+        <section data-background="img/bg/highcharts.png">
+          <div class="canvas">
+            <a href="http://www.highcharts.com/" class="link--external">Highcharts</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>Resources</h3>
+        </section>
+        <section data-background="img/bg/css-tricks.png">
+          <div class="canvas">
+            <a href="https://css-tricks.com/mega-list-svg-information/" class="link--external">CSS Tricks - A Compendium of SVG Information</a>
+          </div>
+        </section>
+        <section data-background="img/bg/noun-project.png">
+          <div class="canvas">
+            <a href="https://thenounproject.com/" class="link--external">The Noun Project</a>
+          </div>
+        </section>
+        <section data-background="img/bg/sara-soueidan.png">
+          <div class="canvas">
+            <a href="http://sarasoueidan.com/" class="link--external">Sara Soueidan</a>
+          </div>
+        </section>
+        <section data-background="img/bg/codepen.png">
+          <div class="canvas">
+            <a href="http://codepen.io/search?q=svg&limit=all&depth=everything&show_forks=false" class="link--external">SVGs on Codepen</a>
+          </div>
+        </section>
+        <section data-background="img/bg/codrops.png">
+          <div class="canvas">
+            <a href="http://tympanus.net/codrops/?s=svg&search-type=posts" class="link--external">Codrops</a>
+          </div>
+        </section>
+        <section data-background="img/bg/svg-immersions.png">
+          <div class="canvas">
+            <a href="http://svgimmersion.com/" class="link--external">SVG Immersions Podcast</a>
+          </div>
+        </section>
+
+        <!-- <section>
+          <img src="img/gutt-about2.svg" alt="" width="400">
+        </section>
+
+        <section>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="350" width="350" x="0px" y="0px"
+          viewBox="0 0 350 350" xml:space="preserve">
+            <defs>
+              <path id="arrow-mask" d="M112.4-68.2L112.4-68.2C89.3-106,47.6-131.4,0-131.4c-47.5,0-89.2,25.3-112.3,63.2l-7.4-27.8
+                l-26.9,7.2c30.1-49.5,84.6-82.7,146.6-82.7c62.4,0,117,33.5,147,83.4l-7.3,27.2L112.4-68.2z"/>
+
+              <linearGradient id="arrow-gradient" x1="0" y1="0" x2="0" y2="1">
+                <stop  offset="50%" style="stop-color:#F37553"/>
+                <stop  offset="50.1%" style="stop-color:#3CC0C2"/>
+              </linearGradient>
+
+              <clipPath id="arrow-clip-path">
+                <use xlink:href="#arrow-mask" overflow="visible" x="175" y="175"/>
+              </clipPath>
+
+              <g id="arrow" clip-path="url(#arrow-clip-path)">
+                <circle id="arrow-circle" cx="175" cy="175" r="175" fill="url(#arrow-gradient)"/>
+                <animateTransform xlink:href="#arrow-circle" attributeType="XML"
+                                       attributeName="transform"
+                                       type="rotate"
+                                       from="20 175 175" to="170 175 175"
+                                       dur="2s"
+                                       repeatCount="indefinite"
+                                       calcMode="spline"
+                                       keySplines="0.1 0.8 0.2 1"
+                                       />
+              </g>
+          </defs>
+
+            <g id="education">
+              <use class="arrow" xlink:href="#arrow"  width="342.9" height="342.9" x="0" y="0"/>
+            </g>
+            <use class="arrow" xlink:href="#arrow" width="342.9" height="342.9" x="0" y="0" transform="rotate(120 175 175)"/>
+            <use class="arrow" xlink:href="#arrow" width="342.9" height="342.9" x="0" y="0" transform="rotate(240 175 175)"/>
+          <text transform="matrix(1 0 0 1 106.4491 168.9317)" font-family="'GothamHTF-Bold'" font-size="20.8672">RESEARCH</text>
+          <text transform="matrix(1 0 0 1 106.4491 168.9317)" font-family="'GothamHTF-Bold'" font-size="20.8672">RESEARCH</text>
+          </svg>
+        </section> -->
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        width: 1024,
+        height: 768,
+
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
