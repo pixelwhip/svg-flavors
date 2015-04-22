@@ -1,408 +1,470 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+    <title>reveal.js - The HTML Presentation Framework</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/base.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>The Flavors of SVG</h1>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
+          <p>
+            <small>Created by <a href="http://atendesigngroup.com/about/john-ferris">John Ferris</a> / <a href="https://twitter.com/pixel_whip">@pixel_whip</a></small>
+          </p>
+        </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+        <section>
+          <img src="img/SVG_logo.svg" alt="SVG Logo" height="500" width="500">
+          <aside class="notes">
+            First and foremost a graphics format.
+            1998 - VML proposed by Microsoft, PGML proposed by IBM, Adobe, Netscape and sun - SVG working group was formed.
+            2001 - Adobe released the SVG Viewer 3
+            2001 - W3C makes a recommendation (41% of Americans were on dial-up. 6% on broadband) internet users were still on dial-up) http://www.pewinternet.org/2013/08/26/home-broadband-2013/
+            2005 - Adobe adopts Flash
+            2006 - Opera 9 is the first browser with native support
+            2008 - Apple blocks Flash from iOS devices
+            2009 - Safari, Firefox then Chrome add support
+            2011 - IE9 is released, marking the last major browser to support
+            2012 - Apple releases retina devices
+            2012 - Microsoft drops support for VML with the release of IE10
+          </aside>
+        </section>
+        <section>
+          <div class="l--stacked">
+            <div class="l-primary">
+              <svg version="1.1" height="200" width="400">
+                <style>text { text-transform: uppercase; font-weight: bold; }</style>
+                <circle r="90" cx="200" cy="100" fill="#FF8C00" stroke="#E48700" stroke-width="5" />
+                <rect x="50" y="60" width="300" height="80" fill="#333" stroke="#555" stroke-width="5"/>
+                <text x="200" y="105" fill="#fff" text-anchor="middle" alignment-baseline="middle">It's Markup!</text>
+              </svg>
+            </div>
+            <div class="l-secondary">
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
+              <pre><code><svg version="1.1" height="200" width="400">
+  <circle r="90" cx="200" cy="100" fill="#FF8C00" stroke="#E48700" stroke-width="5" />
+  <rect x="50" y="60" width="300" height="80" fill="#333" stroke="#555" stroke-width="5"/>
+  <text x="200" y="105" fill="#fff" text-anchor="middle" alignment-baseline="middle">It's Markup!</text>
+</svg></code></pre>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man.svg" alt="kool-aid man" style="transform: scale(2.2) translate(-12%, 12%);">
+            </div>
+            <div class="l-secondary" style="flex-grow: 1;">
+              <h2>SVG Flavor</h2>
+              <ul>
+                <li>Lightweight</li>
+                <li>Scalable</li>
+              </ul>
+            </div>
+          </div>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+        </section>
+        <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man--smil.svg" alt="kool-aid man">
+            </div>
+            <div class="l-secondary" style="flex-grow: 1;">
+              <h2>SVG Flavor</h2>
+              <ul>
+                <li>Lightweight</li>
+                <li>Scalable</li>
+                <li>SMIL Animation</li>
+              </ul>
+            </div>
+          </div>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+        </section>
+        <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man--filter.svg" alt="kool-aid man">
+            </div>
+            <div class="l-secondary" style="flex-grow: 1;">
+              <h2>SVG Flavor</h2>
+              <ul>
+                <li>Lightweight</li>
+                <li>Scalable</li>
+                <li>SMIL Animation</li>
+                <li>Filters</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man--purple.svg" alt="kool-aid man">
+            </div>
+            <div class="l-secondary" style="flex-grow: 1;">
+              <h2>SVG Flavor</h2>
+              <ul>
+                <li>Lightweight</li>
+                <li>Scalable</li>
+                <li>SMIL Animation</li>
+                <li>Filters</li>
+                <li>CSS Styling</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+        <section>
+          SMIL Animation
+          Synchronized Multimedia Integration Language
+          http://www.w3.org/TR/2001/REC-smil-animation-20010904/
+        </section>
+        <section>
+          CSS
+          <aside class="notes">
+            embedded media queries
+          </aside>
+        </section>
+        <section>
+          Manipulate with JS
+        </section>
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+        <!-- USES -->
+        <section><h3>Logos</h3></section>
+        <section><h3>Icons</h3></section>
+        <section>
+<img src="img/icons.svg" width="700">
+<p><small>Copyright © Jolly Icons by <a href="http://jollyicons.com/">Olly Holovchenko</a> 2013</small></p>
+        </section>
+        <section>
+<img src="img/icons-github.svg" width="300">
+<p><small>Copyright © Jolly Icons by <a href="http://jollyicons.com/">Olly Holovchenko</a> 2013</small></p>
+        </section>
+        <section>
+<img src="img/icons-social.svg" width="700">
+<p><small>Copyright <a href="http://iconmelon.com/">Roberts OzolinsFlat</a></small></p>
+        </section>
+        <section><h3>Animations</h3></section>
+        <section>
+          <p data-height="700" data-theme-id="0" data-slug-hash="LEorev" data-default-tab="result" data-user="sdras" class='codepen'>See the Pen <a href='http://codepen.io/sdras/pen/LEorev/'>Form with Animation That Assists in UX</a> by Sarah Drasner (<a href='http://codepen.io/sdras'>@sdras</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section><h3>Data Visualization</h3></section>
+        <section data-background="img/bg/the-evolution-of-web.png">
+          <div class="canvas">
+            <a href="http://evolutionofweb.appspot.com/#/evolution/" class="link--external">The Evolution of the Web</a>
+          </div>
+        </section>
+        <section><h3>Non-Rectangular inerfaces</h3></section>
+        <section data-background="img/bg/berkeley-social-science.png">
+          <div class="canvas">
+            <a href="http://matrix.berkeley.edu/" class="link--external">Berkeley Social Science Matrix</a>
+          </div>
+        </section>
+        <section data-background="img/bg/circulus-svg.png">
+          <div class="canvas">
+            <a href="http://sarasoueidan.com/tools/circulus/" class="link--external">Circulus SVG</a>
+          </div>
+        </section>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+        <section>
+          <h2>Embed Methods</h2>
+        </section>
+        <section><h2>&lt;img/&gt;</h2></section>
+                <section>
+                  <h2>Picture (with picturefill)</h2>
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+                  <pre><code>
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source type="image/svg+xml" srcset="img/kool-aid-man.svg">
+          <!--[if IE 9]></video><![endif]-->
+          <img src="img/kool-aid-man.png" alt="Kool Aid Man" />
+        </picture>
+                  </code></pre>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
+                  <aside class="notes">
+                    Using the picture element as a fallback works well in situations where
+                     <ol>
+                      <li>You need to provide different art direction at different breakpoints. Meaning you want to provide different.</li>
+                      <li>Or as a simple fallback when the picturefill polyfill is already in use.</li>
+                     </ol>
+                     Otherwise it's overkill.
+                  </aside>
+                </section>
+        <section><h2>&lt;object/&gt;</h2></section>
+        <section><h2>background-image:</h2></section>
+        <section><h2>&lt;svg/&gt;</h2></section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
+        <section>
+          <h2>Tools</h2>
+        </section>
+        <section>
+          <h2>Creating & Editing</h2>
+        </section>
+        <section data-background="img/bg/sublime.png">
+          <div class="canvas">
+            <a href="http://www.sublimetext.com/3" class="link--external">Sublime Text</a>
+          </div>
+        </section>
+        <section data-background="img/bg/illustrator.png">
+          <div class="canvas">
+            <a href="https://www.adobe.com/products/illustrator.html" class="link--external">Adobe Illustrator</a>
+          </div>
+        </section>
+        <section data-background="img/bg/sketch.png">
+          <div class="canvas">
+            <a href="https://www.adobe.com/products/sketch.html" class="link--external">Sketch</a>
+          </div>
+        </section>
+        <section data-background="img/bg/inkscape.png">
+          <div class="canvas">
+            <a href="https://inkscape.org/en/" class="link--external">Inkscape</a>
+          </div>
+        </section>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
+        <section>
+          <h3>Optimization</h3>
+        </section>
+        <section data-background="img/bg/svg-editor.png">
+          <div class="canvas">
+            <a href="https://petercollingridge.appspot.com/svg-editor" class="link--external">Peter Collingridge's SVG Editor</a>
+          </div>
+        </section>
+        <section data-background="img/bg/svgo.png">
+          <div class="canvas">
+            <a href="https://www.npmjs.com/package/svgo" class="link--external">SVGO</a>
+          </div>
+        </section>
+        <section data-background="img/bg/svgomg.png">
+          <div class="canvas">
+            <a href="https://jakearchibald.github.io/svgomg/" class="link--external">SVGOMG</a>
+          </div>
+        </section>
 
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-				</section>
+        <section>
+          <h3>Workflow & Support</h3>
+        </section>
+        <section data-background="img/bg/grunticon.png">
+          <div class="canvas">
+            <a href="http://www.grunticon.com/" class="link--external">Grunticon</a>
+          </div>
+        </section>
+        <section data-background="img/bg/grumpicon.png">
+          <div class="canvas">
+            <a href="http://www.grumpicon.com/" class="link--external">Grumpicon</a>
+          </div>
+        </section>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
+        <section>
+          <h3>Browser Support</h3>
+        </section>
+        <section data-background="img/bg/svgeezy.png">
+          <div class="canvas">
+            <a href="http://benhowdle.im/svgeezy/" class="link--external">SVGeezy</a>
+          </div>
+        </section>
+        <section data-background="img/bg/svg4everybody.png">
+          <div class="canvas">
+            <a href="https://github.com/jonathantneal/svg4everybody" class="link--external">svg4everybody</a>
+          </div>
+        </section>
+        <section data-background="img/bg/modernizr.png">
+          <div class="canvas">
+            <a href="http://modernizr.com/" class="link--external">Modernizr</a>
+          </div>
+        </section>
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
+        <section>
+          <h3>SVG specific libraries</h3>
+        </section>
+        <section data-background="img/bg/raphael.png">
+          <div class="canvas">
+            <a href="http://raphaeljs.com/" class="link--external">Raphael.js</a>
+          </div>
+        </section>
+        <section data-background="img/bg/snap.png">
+          <div class="canvas">
+            <a href="http://snapsvg.io/" class="link--external">Snap.svg</a>
+          </div>
+        </section>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+        <section>
+          <h3>Animation Libraries</h3>
+        </section>
+        <section data-background="img/bg/gsap.png">
+          <div class="canvas">
+            <a href="http://greensock.com/gsap" class="link--external">GSAP</a>
+          </div>
+        </section>
+        <section data-background="img/bg/velocity.png">
+          <div class="canvas">
+            <a href="http://julian.com/research/velocity/" class="link--external">Velocity.js</a>
+          </div>
+        </section>
+        <section><p data-height="700" data-theme-id="0" data-slug-hash="jpecs" data-default-tab="result" data-user="sol0mka" class='codepen'>See the Pen <a href='http://codepen.io/sol0mka/pen/jpecs/'>VelocityJS + SVG = ♡</a> by LegoMushroom (<a href='http://codepen.io/sol0mka'>@sol0mka</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script></section>
 
-    var nodes = document.querySelectorAll( selector );
+        <section>
+          <h3>Data Visualization</h3>
+        </section>
+        <section data-background="img/bg/d3.png">
+          <div class="canvas">
+            <a href="http://d3js.org/" class="link--external">D3 - Data Driven Documents</a>
+          </div>
+        </section>
+        <section data-background="img/bg/highcharts.png">
+          <div class="canvas">
+            <a href="http://www.highcharts.com/" class="link--external">Highcharts</a>
+          </div>
+        </section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+        <section>
+          <h3>Resources</h3>
+        </section>
+        <section data-background="img/bg/css-tricks.png">
+          <div class="canvas">
+            <a href="https://css-tricks.com/mega-list-svg-information/" class="link--external">CSS Tricks - A Compendium of SVG Information</a>
+          </div>
+        </section>
+        <section data-background="img/bg/noun-project.png">
+          <div class="canvas">
+            <a href="https://thenounproject.com/" class="link--external">The Noun Project</a>
+          </div>
+        </section>
+        <section data-background="img/bg/sara-soueidan.png">
+          <div class="canvas">
+            <a href="http://sarasoueidan.com/" class="link--external">Sara Soueidan</a>
+          </div>
+        </section>
+        <section data-background="img/bg/codepen.png">
+          <div class="canvas">
+            <a href="http://codepen.io/search?q=svg&limit=all&depth=everything&show_forks=false" class="link--external">SVGs on Codepen</a>
+          </div>
+        </section>
+        <section data-background="img/bg/codrops.png">
+          <div class="canvas">
+            <a href="http://tympanus.net/codrops/?s=svg&search-type=posts" class="link--external">Codrops</a>
+          </div>
+        </section>
+        <section data-background="img/bg/svg-immersions.png">
+          <div class="canvas">
+            <a href="http://svgimmersion.com/" class="link--external">SVG Immersions Podcast</a>
+          </div>
+        </section>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+        <!-- <section>
+          <img src="img/gutt-about2.svg" alt="" width="400">
+        </section>
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+        <section>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="350" width="350" x="0px" y="0px"
+          viewBox="0 0 350 350" xml:space="preserve">
+            <defs>
+              <path id="arrow-mask" d="M112.4-68.2L112.4-68.2C89.3-106,47.6-131.4,0-131.4c-47.5,0-89.2,25.3-112.3,63.2l-7.4-27.8
+                l-26.9,7.2c30.1-49.5,84.6-82.7,146.6-82.7c62.4,0,117,33.5,147,83.4l-7.3,27.2L112.4-68.2z"/>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+              <linearGradient id="arrow-gradient" x1="0" y1="0" x2="0" y2="1">
+                <stop  offset="50%" style="stop-color:#F37553"/>
+                <stop  offset="50.1%" style="stop-color:#3CC0C2"/>
+              </linearGradient>
 
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							<tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
-						</tbody>
-					</table>
-				</section>
+              <clipPath id="arrow-clip-path">
+                <use xlink:href="#arrow-mask" overflow="visible" x="175" y="175"/>
+              </clipPath>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+              <g id="arrow" clip-path="url(#arrow-clip-path)">
+                <circle id="arrow-circle" cx="175" cy="175" r="175" fill="url(#arrow-gradient)"/>
+                <animateTransform xlink:href="#arrow-circle" attributeType="XML"
+                                       attributeName="transform"
+                                       type="rotate"
+                                       from="20 175 175" to="170 175 175"
+                                       dur="2s"
+                                       repeatCount="indefinite"
+                                       calcMode="spline"
+                                       keySplines="0.1 0.8 0.2 1"
+                                       />
+              </g>
+          </defs>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+            <g id="education">
+              <use class="arrow" xlink:href="#arrow"  width="342.9" height="342.9" x="0" y="0"/>
+            </g>
+            <use class="arrow" xlink:href="#arrow" width="342.9" height="342.9" x="0" y="0" transform="rotate(120 175 175)"/>
+            <use class="arrow" xlink:href="#arrow" width="342.9" height="342.9" x="0" y="0" transform="rotate(240 175 175)"/>
+          <text transform="matrix(1 0 0 1 106.4491 168.9317)" font-family="'GothamHTF-Bold'" font-size="20.8672">RESEARCH</text>
+          <text transform="matrix(1 0 0 1 106.4491 168.9317)" font-family="'GothamHTF-Bold'" font-size="20.8672">RESEARCH</text>
+          </svg>
+        </section> -->
+      </div>
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+    </div>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+    <script>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        width: 1024,
+        height: 768,
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+    </script>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
-
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
-		</script>
-
-	</body>
+  </body>
 </html>

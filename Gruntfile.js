@@ -1,4 +1,6 @@
 /* global module:false */
+var compression = require('compression');
+
 module.exports = function(grunt) {
 	var port = grunt.option('port') || 8000;
 	// Project configuration
@@ -37,6 +39,7 @@ module.exports = function(grunt) {
 			},
 			themes: {
 				files: {
+					'css/theme/base.css': 'css/theme/source/base.scss',
 					'css/theme/black.css': 'css/theme/source/black.scss',
 					'css/theme/white.css': 'css/theme/source/white.scss',
 					'css/theme/league.css': 'css/theme/source/league.scss',
@@ -96,8 +99,12 @@ module.exports = function(grunt) {
 				options: {
 					port: port,
 					base: '.',
-                    livereload: true,
-                    open: true
+          livereload: true,
+          open: true
+          // middleware: function(connect, options, middlewares) {
+          //     middlewares.unshift(compression());
+          //     return middlewares;
+          // }
 				}
 			}
 		},
@@ -129,9 +136,9 @@ module.exports = function(grunt) {
 				files: [ 'css/reveal.scss' ],
 				tasks: 'css-core'
 			},
-            html: {
-                files: [ 'index.html']
-            }
+      html: {
+          files: [ 'index.html', 'img/*']
+      }
 		}
 
 	});
