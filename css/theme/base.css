@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 /**
  * A simple theme for reveal.js presentations, similar
  * to the default theme. The accent color is darkblue.
@@ -23,7 +21,7 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Khula', sans-serif;
   font-size: 36px;
   font-weight: normal;
   color: #000; }
@@ -43,10 +41,10 @@ body {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #000;
-  font-family: 'News Cycle', Impact, sans-serif;
-  font-weight: normal;
+  font-family: 'Khula', sans-serif;
+  font-weight: 800;
   line-height: 1.2;
-  letter-spacing: normal;
+  letter-spacing: -0.03em;
   text-transform: none;
   text-shadow: none;
   word-wrap: break-word; }
@@ -155,7 +153,8 @@ body {
   color: #DCDCDC;
   white-space: pre-wrap;
   line-height: 1.5em;
-  font-size: 1.2em; }
+  font-size: 1em;
+  font-weight: 400; }
 
 .reveal table {
   margin: auto;
@@ -285,3 +284,17 @@ body {
     padding: 0.5em;
     font-size: 0.75em;
     letter-spacing: 0.03em; }
+
+#main-title {
+  letter-spacing: 0.33em;
+  font-weight: 100;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: red; }
+  #main-title > span {
+    display: block;
+    font-family: 'kool_beansregular', sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 4em;
+    line-height: 0.9em;
+    text-shadow: 0 0 1em #ffffff; }

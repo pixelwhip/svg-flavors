@@ -109,6 +109,10 @@ module.exports = function(grunt) {
 			}
 		},
 
+		'gh-pages': {
+	    src: ['**']
+	  },
+
 		zip: {
 			'reveal-js-presentation.zip': [
 				'index.html',
@@ -153,6 +157,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 	grunt.loadNpmTasks( 'grunt-zip' );
+	grunt.loadNpmTasks( 'grunt-gh-pages' );
 
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
