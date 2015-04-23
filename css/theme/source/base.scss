@@ -12,17 +12,23 @@
 @import "../template/settings";
 // ---------------------------------------------
 
+// @font-face{
+//   font-family: 'koolbean';
+//   src: url('../../lib/fonts/kool-bean/koolbean.eot');
+//   src: url('../../lib/fonts/kool-bean/koolbean.eot?#iefix') format('embedded-opentype'),
+//        url('../../lib/fonts/kool-bean/koolbean.woff') format('woff'),
+//        url('../../lib/fonts/kool-bean/koolbean.ttf') format('truetype'),
+//        url('../../lib/fonts/kool-bean/koolbean.svg#webfont') format('svg');
+// }
 
-
-// Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-
+$red: red;
 
 // Override theme settings (see ../template/settings.scss)
-$mainFont: 'Lato', sans-serif;
+$mainFont:  'Khula', sans-serif;
 $mainColor: #000;
-$headingFont: 'News Cycle', Impact, sans-serif;
+$headingFont: 'Khula', sans-serif;
+$headingFontWeight: 800;
+$headingLetterSpacing: -.03em;
 $headingColor: #000;
 $headingTextShadow: none;
 $headingTextTransform: none;
@@ -30,6 +36,8 @@ $backgroundColor: #fff;
 $linkColor: #00008B;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+$title-font: 'kool_beansregular', sans-serif;
 
 #education {
   cursor: pointer;
@@ -45,3 +53,20 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 // Theme template ------------------------------
 @import "../template/aten";
 // ---------------------------------------------
+
+#main-title {
+  letter-spacing: .33em;
+  font-weight: 100;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: $red;
+
+  > span {
+    display: block;
+    font-family: $title-font;
+    letter-spacing: .1em;
+    font-size: 4em;
+    line-height: .9em;
+    text-shadow: 0 0 1em #ffffff;
+  }
+}

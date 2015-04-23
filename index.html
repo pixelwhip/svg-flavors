@@ -13,7 +13,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
+    <link rel="stylesheet" href="lib/font/kool-bean/stylesheet.css" type="text/css" charset="utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Khula:300,800,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/base.css" id="theme">
 
@@ -41,10 +42,10 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h1>The Flavors of SVG</h1>
+          <h1 id="main-title">The Flavors of <span>SVG</span></h1>
 
           <p>
-            <small>Created by <a href="http://atendesigngroup.com/about/john-ferris">John Ferris</a> / <a href="https://twitter.com/pixel_whip">@pixel_whip</a></small>
+            <small><a href="http://atendesigngroup.com/about/john-ferris">John Ferris</a> / <a href="https://twitter.com/pixel_whip">@pixel_whip</a></small>
           </p>
         </section>
 
@@ -86,86 +87,105 @@
         </section>
         <section>
           <div class="l--split">
-            <div class="l--primary" style="flex-grow: 2;">
+            <div class="l--primary" style="flex-grow: 2; position:relative;">
               <img src="img/kool-aid-man.svg" alt="kool-aid man" style="transform: scale(2.2) translate(-12%, 12%);">
             </div>
             <div class="l-secondary" style="flex-grow: 1;">
-              <h2>SVG Flavor</h2>
-              <ul>
-                <li>Lightweight</li>
-                <li>Scalable</li>
-              </ul>
+              <h3 class="fragment">Scaled</h3>
+              <h3 class="fragment">Animated</h3>
+              <h3 class="fragment">Filtered</h3>
+              <h3 class="fragment">Styled</h3>
+              <h3 class="fragment">Scripted</h3>
             </div>
           </div>
-
         </section>
+
         <section>
           <div class="l--split">
             <div class="l--primary" style="flex-grow: 2;">
               <img src="img/kool-aid-man--smil.svg" alt="kool-aid man">
-            </div>
-            <div class="l-secondary" style="flex-grow: 1;">
-              <h2>SVG Flavor</h2>
-              <ul>
-                <li>Lightweight</li>
-                <li>Scalable</li>
-                <li>SMIL Animation</li>
-              </ul>
+                <pre><code class="xml" data-trim>
+                  <!-- SMIL Animation -->
+<animateTransform
+                        xlink:href="#left-arm"
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="rotate"
+                        values="0 135 195; 20 135 195; 0 135 195;"
+                        dur="2s"
+                        d="left-arm-up"
+                        repeatCount="indefinite"
+                        />  </code></pre>
+
+              <aside class="notes">Synchronized Multimedia Integration Language
+          http://www.w3.org/TR/2001/REC-smil-animation-20010904/</aside>
             </div>
           </div>
-
-        </section>
-        <section>
+</section>
+          <section>
           <div class="l--split">
             <div class="l--primary" style="flex-grow: 2;">
               <img src="img/kool-aid-man--filter.svg" alt="kool-aid man">
-            </div>
-            <div class="l-secondary" style="flex-grow: 1;">
-              <h2>SVG Flavor</h2>
-              <ul>
-                <li>Lightweight</li>
-                <li>Scalable</li>
-                <li>SMIL Animation</li>
-                <li>Filters</li>
-              </ul>
+                <pre><code class="xml" data-trim>
+                  <!-- SVG Filters -->
+<filter id="blur" x="0" y="0">
+  <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+</filter>
+<g id="kool-aid-man" filter="url(#blur)">...</g>
+ </code></pre>
+
+              <aside class="notes">Synchronized Multimedia Integration Language
+          http://www.w3.org/TR/2001/REC-smil-animation-20010904/</aside>
             </div>
           </div>
+
         </section>
         <section>
           <div class="l--split">
             <div class="l--primary" style="flex-grow: 2;">
               <img src="img/kool-aid-man--purple.svg" alt="kool-aid man">
-            </div>
-            <div class="l-secondary" style="flex-grow: 1;">
-              <h2>SVG Flavor</h2>
-              <ul>
-                <li>Lightweight</li>
-                <li>Scalable</li>
-                <li>SMIL Animation</li>
-                <li>Filters</li>
-                <li>CSS Styling</li>
-              </ul>
+                <pre><code class="css" data-trim>
+                  /** CSS Styles **/
+<style>
+  .kool-aid { fill: purple; }
+</style>
+ </code></pre>
+
+              <aside class="notes">Synchronized Multimedia Integration Language
+          http://www.w3.org/TR/2001/REC-smil-animation-20010904/</aside>
             </div>
           </div>
+
         </section>
 
         <section>
-          SMIL Animation
-          Synchronized Multimedia Integration Language
-          http://www.w3.org/TR/2001/REC-smil-animation-20010904/
-        </section>
-        <section>
-          CSS
-          <aside class="notes">
-            embedded media queries
-          </aside>
-        </section>
-        <section>
-          Manipulate with JS
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man.svg" alt="kool-aid man" width="400">
+              <div><small>width: 400px;</small></div>
+            </div>
+            <div class="l-secondary">
+              <img src="img/kool-aid-man.svg" alt="kool-aid man" width="300">
+              <div><small>width: 300px;</small></div>
+            </div>
+          </div>
+
+                <pre><code class="css" data-trim>
+                  /** Embedded Media Queries **/
+@media (max-width: 360px) {
+  .kool-aid { fill: orange; }
+  .oh-yeah { display: none; }
+  .oh-no { display: block; }
+}
+ </code></pre>
+
+              <aside class="notes">Synchronized Multimedia Integration Language
+          http://www.w3.org/TR/2001/REC-smil-animation-20010904/</aside>
+
         </section>
 
         <!-- USES -->
-        <section><h3>Logos</h3></section>
+        <!-- <section><h3>Logos</h3></section> -->
         <section><h3>Icons</h3></section>
         <section>
 <img src="img/icons.svg" width="700">
@@ -190,7 +210,7 @@
             <a href="http://evolutionofweb.appspot.com/#/evolution/" class="link--external">The Evolution of the Web</a>
           </div>
         </section>
-        <section><h3>Non-Rectangular inerfaces</h3></section>
+        <section><h3>Non-Rectangular Interfaces</h3></section>
         <section data-background="img/bg/berkeley-social-science.png">
           <div class="canvas">
             <a href="http://matrix.berkeley.edu/" class="link--external">Berkeley Social Science Matrix</a>
@@ -205,19 +225,25 @@
         <section>
           <h2>Embed Methods</h2>
         </section>
-        <section><h2>&lt;img/&gt;</h2></section>
-                <section>
-                  <h2>Picture (with picturefill)</h2>
+        <section>
+          <h2>&lt;img/&gt;</h2>
+          <pre><code><img src="img/kool-aid-man.svg" alt="kool-aid-man"/></code></pre>
+        </section>
+        <section>
+          <h3>Fallback: Inline JS</h3>
+          <pre><code><img src="img/kool-aid-man.svg" alt="kool-aid-man" onerror="this.src='img/kool-aid-man.png'; this.onerror=null;" /></code></pre>
+        </section>
+        <section>
+                  <h3>Fallback: Picture (with picturefill)</h3>
 
-                  <pre><code>
-        <picture>
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source type="image/svg+xml" srcset="img/kool-aid-man.svg">
-          <!--[if IE 9]></video><![endif]-->
-          <img src="img/kool-aid-man.png" alt="Kool Aid Man" />
-        </picture>
+                  <pre><code data-trim class="xml">
+<picture>
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  <source type="image/svg+xml" srcset="img/kool-aid-man.svg">
+  <!--[if IE 9]></video><![endif]-->
+  <img src="img/kool-aid-man.png" alt="Kool Aid Man" />
+</picture>
                   </code></pre>
-
 
                   <aside class="notes">
                     Using the picture element as a fallback works well in situations where
@@ -228,10 +254,30 @@
                      Otherwise it's overkill.
                   </aside>
                 </section>
-        <section><h2>&lt;object/&gt;</h2></section>
-        <section><h2>background-image:</h2></section>
-        <section><h2>&lt;svg/&gt;</h2></section>
+         <section>
+          <h2>&lt;object/&gt;</h2>
+          <pre><code><object type="image/svg+xml" data="img/kool-aid-man.svg"></object></code></pre>
+        </section>
+        <section>
+          <h3>Fallback: Alternative Content</h3>
+          <pre><code><object type="image/svg+xml" data="img/kool-aid-man.svg">
+  <img src="img/kool-aid-man.png" alt="Kool-aid Man">
+</object></code></pre>
+        </section>
 
+        <section>
+          <h2>background-image: url();</h2>
+          <pre><code class="css">.icon--kool-aid { background-image: url(img/kool-aid-man.svg); }</code></pre>
+        </section>
+
+        <section>
+        <h3>Fallback: Modernizr</h3>
+          <pre><code class="css">.icon--kool-aid { background-image: url(img/kool-aid-man.svg); }
+.no-svg .icon--kool-aid { background-image: url(img/kool-aid-man.svg);</code></pre>
+        </section>
+        <section><h2>Inline &lt;svg/&gt;</h2>
+<pre><code><svg version="1.1" height="350" width="350">...</svg></code></pre>
+</section>
         <section>
           <h2>Tools</h2>
         </section>
