@@ -73,8 +73,8 @@ body {
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img, .reveal video, .reveal iframe {
-  max-width: 95%;
-  max-height: 95%; }
+  max-width: 100%;
+  max-height: 100%; }
 
 .reveal strong, .reveal b {
   font-weight: bold; }
@@ -298,3 +298,30 @@ body {
     font-size: 4em;
     line-height: 0.9em;
     text-shadow: 0 0 1em #ffffff; }
+
+.aten-logo {
+  height: 100%;
+  width: 100%;
+  margin: auto !important; }
+
+.aten-logo-container {
+  height: 513px;
+  width: 300px;
+  margin: auto !important;
+  text-align: center;
+  background-color: rgba(250, 128, 114, 0);
+  transition: all 1.5s ease-in-out; }
+  .aten-logo-container.is-tall {
+    height: 550px;
+    width: 300px; }
+  #aten-logo.visible ~ .aten-logo-container {
+    background-color: salmon; }
+  #aten-logo-1.visible ~ .aten-logo-container {
+    height: 500px;
+    width: 330px; }
+  #aten-logo-2.visible ~ .aten-logo-container {
+    height: 400px;
+    width: 400px; }
+  #aten-logo-3.visible ~ .aten-logo-container {
+    height: 270px;
+    width: 571px; }

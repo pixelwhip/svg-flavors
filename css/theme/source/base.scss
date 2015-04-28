@@ -70,3 +70,47 @@ $title-font: 'kool_beansregular', sans-serif;
     text-shadow: 0 0 1em #ffffff;
   }
 }
+
+//
+// Logo Example
+//
+
+.aten-logo {
+  height: 100%;
+  width: 100%;
+  margin: auto !important;
+}
+
+.aten-logo-container {
+
+  height: 513px;
+  width: 300px;
+  margin: auto !important;
+  text-align: center;
+  background-color: rgba(salmon, 0);
+  transition: all 1.5s ease-in-out;
+
+  &.is-tall {
+    height: 550px;
+    width: 300px;
+  }
+
+  #aten-logo.visible ~ & {
+    background-color: rgba(salmon, 1);
+  }
+
+  #aten-logo-1.visible ~ & {
+    height: 500px;
+    width: 330px;
+  }
+
+  #aten-logo-2.visible ~ & {
+    height: 400px;
+    width: 400px;
+  }
+
+  #aten-logo-3.visible ~ & {
+    height: 270px;
+    width: 571px;
+  }
+}
