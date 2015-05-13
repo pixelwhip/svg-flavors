@@ -335,12 +335,16 @@ body {
 
 .l--split {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   h2 + & {
     margin-top: 2em;
   }
 
   > .l-secondary {
+    width: 550px;
+
     > h2 {
       text-align: left;
     }
@@ -364,18 +368,23 @@ input[type="radio"] {
   height: 768px;
   width: 1024px;
   position: relative;
+  box-sizing: border-box;
 
   .link--external {
     position: absolute;
     bottom: 0;
     display: block;
-    background-color: rgba(#000, .7);
-    color: #fff;
+    // color: #fff;
     text-align: center;
     width: 100%;
     padding: .5em;
     font-size: .75em;
     letter-spacing: .03em;
+  }
+
+  .link--external--inverse {
+    background-color: rgba(#000, .7);
+    color: #fff;
   }
 }
 
@@ -486,6 +495,11 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.time-form-minute,
+.time-form-hour {
+  width: 1.5em;
+}
+
 .face {
   &[aria-hidden="true"] {
     pointer-events: none;
@@ -553,3 +567,60 @@ input[type="radio"] {
     font-family: monospace;
   }
 }
+
+.image--main {
+  max-width: 80%;
+}
+
+.circulus {
+  max-width: 75%;
+  margin-top: 100px;
+}
+
+//
+// Code samples
+//
+.canvas--code {
+  h3 {
+    margin-bottom: 1em;
+
+    > em {
+      font-weight: 100;
+      font-style: normal;
+    }
+  }
+
+  h2 {
+    margin-bottom: .75em;
+  }
+}
+
+.canvas--code--split {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.code-footer {
+  padding-bottom: 60px !important;
+}
+
+.code--fullsize {
+  max-height: 100% !important;
+}
+//
+// Supplement
+//
+
+.canvas--supplement {
+  padding-bottom: 300px;
+}
+
+.image--supplement {
+  margin: auto !important;
+  position: absolute;
+  top: 500px;
+  left: 0;
+  right: 0;
+}
+
