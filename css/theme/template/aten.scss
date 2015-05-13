@@ -434,10 +434,21 @@ input[type="radio"] {
   text-transform: uppercase;
   font-weight: bold !important;
   font-size: .625em !important;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  text-indent: 40px;
+  white-space: nowrap;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
 }
 
-.answer--yes { color: green; }
-.answer--no { color: red; }
+.answer--yes { color: green; background-image: url('../../img/yes.svg'); }
+.answer--no { color: red; background-image: url('../../img/no.svg'); }
 
 .table--centered {
   td, th { text-align: center !important;}
