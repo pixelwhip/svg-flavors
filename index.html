@@ -65,6 +65,7 @@
             2012 - Microsoft drops support for VML with the release of IE10
           </aside>
         </section>
+
         <section>
           <div class="l--stacked">
             <div class="l-primary">
@@ -184,6 +185,302 @@
 
         </section>
 
+
+
+        <section>
+          <h2>Embed Methods</h2>
+        </section>
+
+        <section>
+          <h2>&lt;img/&gt;</h2>
+          <pre><code><img src="img/kool-aid-man.svg" alt="kool-aid-man"/></code></pre>
+          <table class="table--centered table--bordered">
+            <thead>
+              <tr class="row--mainhead">
+                <th colspan="3">Animation</th>
+                <th>Script w/ JS</th>
+                <th colspan="2">Style w/ CSS</th>
+                <th>Cached</th>
+              </tr>
+              <tr class="row--subhead">
+                <th>SMIL</th>
+                <th>CSS</th>
+                <th>JS</th>
+                <td></td>
+                <th>Embedded</th>
+                <th>External</th>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="answer answer--yes">Yes</span></td>
+                <td><span class="answer answer--no">No</span></td>
+                <td><span class="answer answer--no">No</span></td>
+                <td><span class="answer answer--no">No</span></td>
+                <td><span class="answer answer--yes">Yes</span></td>
+                <td><span class="answer answer--no">No</span></td>
+                <td><span class="answer answer--yes">Yes</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h3>Fallback: Inline JS</h3>
+          <pre><code><img src="img/kool-aid-man.svg" alt="kool-aid-man" onerror="this.src='img/kool-aid-man.png'; this.onerror=null;" /></code></pre>
+        </section>
+        <section>
+                  <h3>Fallback: Picture (with picturefill)</h3>
+
+                  <pre><code data-trim class="xml">
+<picture>
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  <source type="image/svg+xml" srcset="img/kool-aid-man.svg">
+  <!--[if IE 9]></video><![endif]-->
+  <img src="img/kool-aid-man.png" alt="Kool Aid Man" />
+</picture>
+                  </code></pre>
+
+                  <aside class="notes">
+                    Using the picture element as a fallback works well in situations where
+                     <ol>
+                      <li>You need to provide different art direction at different breakpoints. Meaning you want to provide different.</li>
+                      <li>Or as a simple fallback when the picturefill polyfill is already in use.</li>
+                     </ol>
+                     Otherwise it's overkill.
+                  </aside>
+                </section>
+
+        <section>
+          <h2>background-image: url();</h2>
+          <pre><code class="css">.icon--kool-aid { background-image: url(img/kool-aid-man.svg); }</code></pre>
+          <table class="table--centered table--bordered">
+            <thead>
+              <tr class="row--mainhead">
+                <th colspan="3">Animation</th>
+                <th>Script w/ JS</th>
+                <th colspan="2">Style w/ CSS</th>
+                <th>Cached</th>
+              </tr>
+              <tr class="row--subhead">
+                <th>SMIL</th>
+                <th>CSS</th>
+                <th>JS</th>
+                <td></td>
+                <th>Embedded</th>
+                <th>External</th>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+               <td><span class="answer answer--yes">Yes</span></td>
+               <td><span class="answer answer--no">No</span></td>
+               <td><span class="answer answer--no">No</span></td>
+               <td><span class="answer answer--no">No</span></td>
+               <td><span class="answer answer--yes">Yes</span></td>
+               <td><span class="answer answer--no">No</span></td>
+               <td><span class="answer answer--yes">Yes</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+        <h3>Fallback: Modernizr</h3>
+          <pre><code class="css">.icon--kool-aid { background-image: url(img/kool-aid-man.svg); }
+.no-svg .icon--kool-aid { background-image: url(img/kool-aid-man.svg);</code></pre>
+        </section>
+         <section>
+          <h2>&lt;object/&gt;</h2>
+          <pre><code><object type="image/svg+xml" data="img/kool-aid-man.svg"></object></code></pre>
+          <table class="table--centered table--bordered">
+            <thead>
+              <tr class="row--mainhead">
+                <th colspan="3">Animation</th>
+                <th>Script w/ JS</th>
+                <th colspan="2">Style w/ CSS</th>
+                <th>Cached</th>
+              </tr>
+              <tr class="row--subhead">
+                <th>SMIL</th>
+                <th>CSS</th>
+                <th>JS</th>
+                <td></td>
+                <th>Embedded</th>
+                <th>External</th>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="answer answer--yes">Yes</span></td>
+                <td><span class="answer answer--no">No</span></td>
+                <td><span class="answer answer--yes">Yes</span></td>
+                <td><span class="answer answer--yes">Yes</span></td>
+                <td><span class="answer answer--yes">Yes</span></td>
+                <td><span class="answer answer--no">No</span></td>
+                <td><span class="answer answer--yes">Yes</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h3>Fallback: Alternative Content</h3>
+          <pre><code><object type="image/svg+xml" data="img/kool-aid-man.svg">
+  <img src="img/kool-aid-man.png" alt="Kool-aid Man">
+</object></code></pre>
+        </section>
+        <section><h2>Inline &lt;svg/&gt;</h2>
+<pre><code><svg version="1.1" height="350" width="350">...</svg></code></pre>
+<table class="table--centered table--bordered">
+  <thead>
+    <tr class="row--mainhead">
+      <th colspan="3">Animation</th>
+      <th>Script w/ JS</th>
+      <th colspan="2">Style w/ CSS</th>
+      <th>Cached</th>
+    </tr>
+    <tr class="row--subhead">
+      <th>SMIL</th>
+      <th>CSS</th>
+      <th>JS</th>
+      <td></td>
+      <th>Embedded</th>
+      <th>External</th>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--no">No</span></td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section>
+  <table class="table--centered table--bordered">
+    <thead>
+      <tr class="row--mainhead">
+        <td></td>
+        <th colspan="3">Animation</th>
+        <th>Script w/ JS</th>
+        <th colspan="2">Style w/ CSS</th>
+        <th>Cached</th>
+      </tr>
+      <tr class="row--subhead">
+        <td></td>
+        <th>SMIL</th>
+        <th>CSS</th>
+        <th>JS</th>
+        <td></td>
+        <th>Embedded</th>
+        <th>External</th>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><span class="code">&lt;img/&gt;</span></th>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        <th><span class="code">background-image</span></th>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        <th><span class="code">&lt;object/&gt;</span></th>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th><span class="code">&lt;svg/&gt;</span></th>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
+        <td><span class="answer answer--no">No</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+        <section><h2>SVG Injector</h2>
+<pre><code class="javascript"><img class="inject-me" src="img/kool-aid-man.svg" alt="kool-aid-man"/>
+
+<script src="js/svg-injector.min.js"></script>
+</code></pre>
+<pre><code class="javascript">// Elements to inject
+var mySVGsToInject = document.querySelectorAll('img.inject-me');
+// Trigger the injection
+SVGInjector(mySVGsToInject);
+</code></pre>
+<table class="table--centered table--bordered">
+  <thead>
+    <tr class="row--mainhead">
+      <th colspan="3">Animation</th>
+      <th>Script w/ JS</th>
+      <th colspan="2">Style w/ CSS</th>
+      <th>Cached</th>
+    </tr>
+    <tr class="row--subhead">
+      <th>SMIL</th>
+      <th>CSS</th>
+      <th>JS</th>
+      <td></td>
+      <th>Embedded</th>
+      <th>External</th>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+     <td><span class="answer answer--yes">Yes</span></td>
+    </tr>
+  </tbody>
+</table>
+<p><small>*Requires Javascript</small></p>
+</section>
+
         <!-- USES -->
         <section><h3>Logos</h3></section>
         <section>
@@ -193,7 +490,7 @@
   <div class="l-secondary">
     <pre style="width: 550px; margin-left: 80px; margin-top: 140px;"><code class="xml" data-trim >
 <svg xmlns="http://www.w3.org/2000/svg">
-  <style> @media... </style>
+  <style>/* @media... */</style>
   <g id="mark">...</g>
   <g id="horizontal">...</g>
   <g id="stacked">
@@ -238,7 +535,7 @@
           <div class="fragment" id="aten-logo-1"></div>
           <div class="fragment" id="aten-logo-2"></div>
           <div class="fragment" id="aten-logo-3"></div>
-          <div class="aten-logo-container"><img src="img/aten.svg" class="aten-logo" alt="Aten Logo" ></div>
+          <div class="aten-logo-container"><img src="img/aten.svg" class="aten-logo" alt="Aten Logo" ><i class="cropmark cropmark--top"></i><i class="cropmark cropmark--bottom"></i></div>
         </section>
         <section><h3>Icons</h3></section>
         <section>
@@ -265,102 +562,79 @@
           </div>
         </section>
         <section><h3>Non-Rectangular Interfaces</h3></section>
-        <section data-background="img/bg/berkeley-social-science.png">
+        <section data-background-color="#ffffff">
+
           <div class="canvas">
+            <figure class="image--screenshot">
+              <img src="img/screenshot/ssm.png" alt="Berkeley Social Science Matrix Screenshot">
+            </figure>
             <a href="http://matrix.berkeley.edu/" class="link--external">Berkeley Social Science Matrix</a>
           </div>
         </section>
-        <section data-background="img/bg/circulus-svg.png">
+        <section>
           <div class="canvas">
-            <a href="http://sarasoueidan.com/tools/circulus/" class="link--external">Circulus SVG</a>
+            <img class="inject-this circulus" src="img/circulus.svg">
+
+            <p class="credit">Created with <a href="http://sarasoueidan.com/tools/circulus/">Circulus.svg</a> by <a href="http://sarasoueidan.com/">Sara Soueidan</a>. Animated with <a href="http://greensock.com/gsap">GSAP</a>.</p>
           </div>
         </section>
-
         <section>
-          <h2>Embed Methods</h2>
+          <form class="time-form">
+            <input class="time-form-hour" type="text" name="hour" value="12" size="2" min="1" max="12" maxlength="2">:<input class="time-form-minute" type="text" name="minute" value="00" size="2" min="00" max="59" maxlength="2"pattern="[0-5][0-9]">
+            <input class="time-form-am" type="radio" name="meridian" value="AM"> <label>AM</label>
+            <input class="time-form-pm" type="radio" name="meridian" value="PM" checked>  <label>PM</label>
+            </input>
+            <button>Submit</button>
+            <svg id="time-widget"></svg>
+          </form>
         </section>
-        <section>
-          <h2>&lt;img/&gt;</h2>
-          <pre><code><img src="img/kool-aid-man.svg" alt="kool-aid-man"/></code></pre>
-        </section>
-        <section>
-          <h3>Fallback: Inline JS</h3>
-          <pre><code><img src="img/kool-aid-man.svg" alt="kool-aid-man" onerror="this.src='img/kool-aid-man.png'; this.onerror=null;" /></code></pre>
-        </section>
-        <section>
-                  <h3>Fallback: Picture (with picturefill)</h3>
-
-                  <pre><code data-trim class="xml">
-<picture>
-  <!--[if IE 9]><video style="display: none;"><![endif]-->
-  <source type="image/svg+xml" srcset="img/kool-aid-man.svg">
-  <!--[if IE 9]></video><![endif]-->
-  <img src="img/kool-aid-man.png" alt="Kool Aid Man" />
-</picture>
-                  </code></pre>
-
-                  <aside class="notes">
-                    Using the picture element as a fallback works well in situations where
-                     <ol>
-                      <li>You need to provide different art direction at different breakpoints. Meaning you want to provide different.</li>
-                      <li>Or as a simple fallback when the picturefill polyfill is already in use.</li>
-                     </ol>
-                     Otherwise it's overkill.
-                  </aside>
-                </section>
-         <section>
-          <h2>&lt;object/&gt;</h2>
-          <pre><code><object type="image/svg+xml" data="img/kool-aid-man.svg"></object></code></pre>
-        </section>
-        <section>
-          <h3>Fallback: Alternative Content</h3>
-          <pre><code><object type="image/svg+xml" data="img/kool-aid-man.svg">
-  <img src="img/kool-aid-man.png" alt="Kool-aid Man">
-</object></code></pre>
-        </section>
-
-        <section>
-          <h2>background-image: url();</h2>
-          <pre><code class="css">.icon--kool-aid { background-image: url(img/kool-aid-man.svg); }</code></pre>
-        </section>
-
-        <section>
-        <h3>Fallback: Modernizr</h3>
-          <pre><code class="css">.icon--kool-aid { background-image: url(img/kool-aid-man.svg); }
-.no-svg .icon--kool-aid { background-image: url(img/kool-aid-man.svg);</code></pre>
-        </section>
-        <section><h2>Inline &lt;svg/&gt;</h2>
-<pre><code><svg version="1.1" height="350" width="350">...</svg></code></pre>
-</section>
         <section>
           <h2>Tools</h2>
         </section>
         <section>
           <h2>Creating & Editing</h2>
         </section>
-        <section data-background="img/bg/sublime.png">
-          <div class="canvas">
-            <a href="http://www.sublimetext.com/3" class="link--external">Sublime Text</a>
-          </div>
-        </section>
-        <section data-background="img/bg/illustrator.png">
-          <div class="canvas">
-            <a href="https://www.adobe.com/products/illustrator.html" class="link--external">Adobe Illustrator</a>
-          </div>
-        </section>
-        <section data-background="img/bg/sketch.png">
-          <div class="canvas">
-            <a href="https://www.adobe.com/products/sketch.html" class="link--external">Sketch</a>
-          </div>
-        </section>
-        <section data-background="img/bg/inkscape.png">
-          <div class="canvas">
-            <a href="https://inkscape.org/en/" class="link--external">Inkscape</a>
+
+        <section>
+          <div class="canvas canvas--centered">
+            <div class="l--3up">
+              <figure class="logo">
+                <img class="logo-image" src="img/logos/illustrator.png" alt="Adobe Illustrator Logo">
+                <figcaption class="logo-caption"><a href="https://www.adobe.com/products/illustrator.html" class="logo-link">Adobe Illustrator</a></figcaption>
+              </figure>
+              <figure class="logo">
+                <img class="logo-image" src="img/logos/sketch.png" alt="Sketch">
+                <figcaption class="logo-caption"><a href="https://www.adobe.com/products/sketch.html" class="logo-link">Sketch</a></figcaption>
+              </figure>
+              <figure class="logo">
+                <img class="logo-image" src="img/logos/inkscape.png" alt="Inkscape">
+                <figcaption class="logo-caption"><a href="https://inkscape.org/en/" class="logo-link">Inkscape</a></figcaption>
+              </figure>
+            </div>
           </div>
         </section>
 
         <section>
-          <h3>Optimization</h3>
+          <div class="canvas canvas--centered">
+            <div class="l--3up">
+              <figure class="logo">
+                <img class="logo-image" src="img/logos/sublime.png" alt="Sublime Text">
+                <figcaption class="logo-caption"><a href="http://www.sublimetext.com/" class="logo-link">Sublime Text</a></figcaption>
+              </figure>
+              <figure class="logo">
+                <img class="logo-image" src="img/logos/atom.png" alt="Atom">
+                <figcaption class="logo-caption"><a href="https://atom.io/" class="logo-link">Atom</a></figcaption>
+              </figure>
+              <figure class="logo">
+                <img class="logo-image" src="img/logos/vim.png" alt="Vim">
+                <figcaption class="logo-caption"><a href="http://www.vim.org/" class="logo-link">Vim</a></figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Optimization</h2>
         </section>
         <section data-background="img/bg/svg-editor.png">
           <div class="canvas">
@@ -379,7 +653,7 @@
         </section>
 
         <section>
-          <h3>Workflow & Support</h3>
+          <h2>Workflow & Support</h2>
         </section>
         <section data-background="img/bg/grunticon.png">
           <div class="canvas">
@@ -393,7 +667,7 @@
         </section>
 
         <section>
-          <h3>Browser Support</h3>
+          <h2>Browser Support</h2>
         </section>
         <section data-background="img/bg/svgeezy.png">
           <div class="canvas">
@@ -412,7 +686,7 @@
         </section>
 
         <section>
-          <h3>SVG specific libraries</h3>
+          <h2>SVG specific libraries</h2>
         </section>
         <section data-background="img/bg/raphael.png">
           <div class="canvas">
@@ -426,7 +700,7 @@
         </section>
 
         <section>
-          <h3>Animation Libraries</h3>
+          <h2>Animation Libraries</h2>
         </section>
         <section data-background="img/bg/gsap.png">
           <div class="canvas">
@@ -442,7 +716,7 @@
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script></section>
 
         <section>
-          <h3>Data Visualization</h3>
+          <h2>Data Visualization</h2>
         </section>
         <section data-background="img/bg/d3.png">
           <div class="canvas">
@@ -456,37 +730,36 @@
         </section>
 
         <section>
-          <h3>Resources</h3>
+          <h2>Resources</h2>
         </section>
-        <section data-background="img/bg/css-tricks.png">
-          <div class="canvas">
-            <a href="https://css-tricks.com/mega-list-svg-information/" class="link--external">CSS Tricks - A Compendium of SVG Information</a>
-          </div>
+
+        <section>
+          <h3>SVG How-to</h3>
+          <ul class="links">
+            <li><h4 class="link-heading">Sara Soueidan</h4>
+              <a href="http://sarasoueidan.com/" class="link--external">http://sarasoueidan.com/</a></li>
+            <li><h4 class="link-heading">CSS Tricks - A Compendium of SVG Information</h4> <a href="https://css-tricks.com/mega-list-svg-information/" class="link--external">https://css-tricks.com/mega-list-svg-information/</a></li>
+            <li><h4 class="link-heading">SVG Immersions Podcast</h4><a href="http://svgimmersion.com/" class="link--external">http://svgimmersion.com/</a></li>
+          </ul>
         </section>
-        <section data-background="img/bg/noun-project.png">
-          <div class="canvas">
-            <a href="https://thenounproject.com/" class="link--external">The Noun Project</a>
-          </div>
+
+        <section>
+          <h3>Inspiration</h3>
+          <ul class="links">
+            <li><h4 class="link-heading">Codrops</h4>
+              <a href="http://tympanus.net/codrops/?s=svg&search-type=posts" class="link--external">http://tympanus.net/codrops/</a></li>
+            <li><h4 class="link-heading">Codepen</h4> <a href="http://codepen.io/search?q=svg" class="link--external">http://codepen.io/search?q=svg</a></li>
+            <li><h4 class="link-heading">Mike Bostock’s Blocks</h4><a href="http://bl.ocks.org/mbostock" class="link--external">http://bl.ocks.org/mbostock</a></li>
+          </ul>
         </section>
-        <section data-background="img/bg/sara-soueidan.png">
-          <div class="canvas">
-            <a href="http://sarasoueidan.com/" class="link--external">Sara Soueidan</a>
-          </div>
-        </section>
-        <section data-background="img/bg/codepen.png">
-          <div class="canvas">
-            <a href="http://codepen.io/search?q=svg&limit=all&depth=everything&show_forks=false" class="link--external">SVGs on Codepen</a>
-          </div>
-        </section>
-        <section data-background="img/bg/codrops.png">
-          <div class="canvas">
-            <a href="http://tympanus.net/codrops/?s=svg&search-type=posts" class="link--external">Codrops</a>
-          </div>
-        </section>
-        <section data-background="img/bg/svg-immersions.png">
-          <div class="canvas">
-            <a href="http://svgimmersion.com/" class="link--external">SVG Immersions Podcast</a>
-          </div>
+
+        <section>
+          <h3>Icons</h3>
+          <ul class="links">
+            <li><h4 class="link-heading">The Noun Project</h4>
+              <a href="https://thenounproject.com/" class="link--external">https://thenounproject.com/</a></li>
+            <li><h4 class="link-heading">Ico-Moon</h4> <a href="https://icomoon.io/" class="link--external">https://icomoon.io/</a></li>
+          </ul>
         </section>
 
         <!-- <section>
@@ -540,11 +813,10 @@
     <script src="js/reveal.js"></script>
 
     <script>
-
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: true,
+        controls: false,
         progress: true,
         history: true,
         center: true,
@@ -566,5 +838,22 @@
 
     </script>
 
+    <script src="js/svg-injector.min.js"></script>
+    <script>
+       // Elements to inject
+       var svgLoadEvent = new Event('svgload')
+       var mySVGsToInject = document.querySelectorAll('img.inject-this');
+       // Trigger the injection
+       SVGInjector(mySVGsToInject, {}, function () {
+         // Callback after all SVGs are injected
+         window.document.dispatchEvent(svgLoadEvent);
+       });
+    </script>
+    <!--CDN link for the latest TweenMax-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="js/circulus.js"></script>
+
+    <script src="js/snap.svg-min.js"></script>
+    <script src="js/time-input.js"></script>
   </body>
 </html>
