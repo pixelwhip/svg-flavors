@@ -673,6 +673,25 @@ SVGInjector(mySVGsToInject);
         </section>
 
         <section data-background-color="#ffffff">
+          <div class="canvas canvas--code">
+            <div class="code-main">
+              <h2>SVG Sprites</h2>
+              <h4>icons.svg</h4>
+              <pre><code class="xml"><svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path id="map" d="..."/>
+  <path id="presentation" d="..."/>
+  <path id="document" d="..."/>
+</svg></code></pre>
+              <h4>index.html</h4>
+              <pre><code class="xml"><svg class="icon--map">
+  <use xlink:href="path/to/icons.svg#map"></use>
+</svg></code></pre>
+
+            </div>
+          </div>
+        </section>
+
+        <section data-background-color="#ffffff">
           <div class="canvas">
             <figure class="image--screenshot image--main">
               <img src="img/bg/svg4everybody.png" alt="SVG 4 Everybody Screenshot">
