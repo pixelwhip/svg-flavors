@@ -449,6 +449,7 @@ input[type="radio"] {
   td, th {
     border-bottom: 1px solid $clr-border !important;
     border-left: 1px solid $clr-border !important;
+    padding: .8em .6em .6em !important;
 
     &:last-child {
       border-right: 1px solid $clr-border !important;
@@ -472,6 +473,7 @@ input[type="radio"] {
     font-size: .625em !important;
     font-weight: normal !important;
     border-left: 1px solid $clr-border;
+    font-style: italic;
   }
 }
 
@@ -569,7 +571,7 @@ input[type="radio"] {
 }
 
 .image--main {
-  max-width: 80%;
+  max-width: 75%;
 }
 
 .circulus {
@@ -602,7 +604,7 @@ input[type="radio"] {
 }
 
 .code-footer {
-  padding-bottom: 60px !important;
+  padding-bottom: 20px !important;
 }
 
 .code--fullsize {
