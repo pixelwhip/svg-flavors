@@ -55,10 +55,8 @@ $title-font: 'kool_beansregular', sans-serif;
 // ---------------------------------------------
 
 #main-title {
-  letter-spacing: .33em;
-  font-weight: 100;
+  font-weight: 800;
   font-size: 2em;
-  text-transform: uppercase;
   color: $red;
 
   > span {
@@ -67,6 +65,7 @@ $title-font: 'kool_beansregular', sans-serif;
     letter-spacing: .1em;
     font-size: 4em;
     line-height: .9em;
+    text-transform: uppercase;
     text-shadow: 0 0 1em #ffffff;
   }
 }
@@ -82,21 +81,21 @@ $title-font: 'kool_beansregular', sans-serif;
 }
 
 .aten-logo-container {
-
-  height: 513px;
+  height: 540px;
   width: 300px;
   margin: auto !important;
   text-align: center;
   background-color: rgba(salmon, 0);
   transition: all 1.5s ease-in-out;
+  position: relative;
 
   &.is-tall {
     height: 550px;
     width: 300px;
   }
 
-  #aten-logo.visible ~ & {
-    background-color: rgba(salmon, 1);
+  #aten-logo.visible ~ & .cropmark {
+    opacity: 1;
   }
 
   #aten-logo-1.visible ~ & {
@@ -113,4 +112,60 @@ $title-font: 'kool_beansregular', sans-serif;
     height: 270px;
     width: 571px;
   }
+
+  $clr-cropmark: #333;
+
+  .cropmark {
+    opacity: 0;
+    transition: opacity 2s;
+
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      height: 40px;
+      width: 40px;
+      position: absolute;
+    }
+  }
+
+  .cropmark--top {
+    &:before {
+      bottom: 100%;
+      right: 100%;
+      border-bottom: 1px solid $clr-cropmark;
+      border-right: 1px solid $clr-cropmark;
+    }
+    &:after {
+      bottom: 100%;
+      left: 100%;
+      border-bottom: 1px solid $clr-cropmark;
+      border-left: 1px solid $clr-cropmark;
+    }
+  }
+
+  .cropmark--bottom {
+    &:before {
+      top: 100%;
+      right: 100%;
+      border-top: 1px solid $clr-cropmark;
+      border-right: 1px solid $clr-cropmark;
+    }
+    &:after {
+      top: 100%;
+      left: 100%;
+      border-top: 1px solid $clr-cropmark;
+      border-left: 1px solid $clr-cropmark;
+    }
+  }
+}
+
+.timepoint {
+  font-size: .5em;
+  text-transform: none;
+}
+
+.axis-labels {
+  text-transform: none;
+  font-size: .75em;
 }
