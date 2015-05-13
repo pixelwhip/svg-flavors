@@ -33,7 +33,7 @@ $headingColor: #000;
 $headingTextShadow: none;
 $headingTextTransform: none;
 $backgroundColor: #fff;
-$linkColor: #00008B;
+$linkColor: orange;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
@@ -59,14 +59,12 @@ $title-font: 'kool_beansregular', sans-serif;
   font-size: 2em;
   color: $red;
 
-  > span {
+  > svg {
     display: block;
-    font-family: $title-font;
-    letter-spacing: .1em;
-    font-size: 4em;
-    line-height: .9em;
-    text-transform: uppercase;
-    text-shadow: 0 0 1em #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -30px;
   }
 }
 
