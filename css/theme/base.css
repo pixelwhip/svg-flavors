@@ -350,7 +350,8 @@ input[type="radio"] {
   border-bottom: 1px solid #666 !important; }
   .table--bordered td, .table--bordered th {
     border-bottom: 1px solid #666 !important;
-    border-left: 1px solid #666 !important; }
+    border-left: 1px solid #666 !important;
+    padding: 0.8em 0.6em 0.6em !important; }
     .table--bordered td:last-child, .table--bordered th:last-child {
       border-right: 1px solid #666 !important; }
 
@@ -364,7 +365,8 @@ input[type="radio"] {
 .row--subhead > th, .row--subhead > td {
   font-size: 0.625em !important;
   font-weight: normal !important;
-  border-left: 1px solid #666; }
+  border-left: 1px solid #666;
+  font-style: italic; }
 
 .code {
   font-family: monospace !important;
@@ -432,7 +434,7 @@ input[type="radio"] {
     font-family: monospace; }
 
 .image--main {
-  max-width: 80%; }
+  max-width: 75%; }
 
 .circulus {
   max-width: 75%;
@@ -452,7 +454,7 @@ input[type="radio"] {
   justify-content: space-between; }
 
 .code-footer {
-  padding-bottom: 60px !important; }
+  padding-bottom: 20px !important; }
 
 .code--fullsize {
   max-height: 100% !important; }
