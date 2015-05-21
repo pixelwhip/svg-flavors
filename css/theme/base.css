@@ -481,6 +481,17 @@ input[type="radio"] {
   left: 0;
   right: 0; }
 
+.profile-link {
+  font-weight: 800 !important;
+  color: #333 !important; }
+  .profile-link + .separator {
+    color: #cccccc; }
+
+.session-link {
+  font-size: 0.75em !important;
+  color: #999 !important;
+  margin-top: -0.5em; }
+
 #main-title {
   font-weight: 800;
   font-size: 2em;

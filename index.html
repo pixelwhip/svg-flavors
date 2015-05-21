@@ -72,10 +72,9 @@
 </svg>
 </h1>
 
-          <p>
-            <a href="http://atendesigngroup.com/about/john-ferris">John Ferris</a> / <a href="https://twitter.com/pixel_whip">@pixel_whip</a>
-
-          </p>
+          <p><a href="http://atendesigngroup.com/about/john-ferris" class="profile-link">John Ferris</a> <span class="separator">/</span> <a href="https://twitter.com/pixel_whip" class="profile-link">@pixel_whip</a>
+          <br/><a class="session-link" href="http://pixelwhip.github.io/svg-flavors/#/">http://pixelwhip.github.io/svg-flavors</a>
+        </p>
         </section>
 
         <section>
@@ -228,7 +227,7 @@
         </div>
         <footer class="code-footer">
 
-          <table class="table--centered table--bordered">
+          <table class="table--centered table--bordered fragment">
             <thead>
               <tr class="row--mainhead">
                 <th colspan="3">Animation</th>
@@ -266,6 +265,13 @@
           <pre><code><img src="img/kool-aid-man.svg" alt="kool-aid-man" onerror="this.src='img/kool-aid-man.png'; this.onerror=null;" /></code></pre>
         </div>
         </section>
+
+                <section>
+                  <div class="canvas canvas--code canvas--supplement">
+                    <h3>Fallback: <em>SVGeezy</em></h3>
+                    <figure class="image--screenshot image--main"><img src="img/bg/svgeezy.png" alt="SVGeezy"></figure>
+                  </div>
+                </section>
         <section>
                  <div class="canvas canvas--code canvas--supplement">
                    <h3>Fallback: <em>Picturefill</em></h3>
@@ -290,13 +296,6 @@
                   </aside>
                 </section>
 
-                <section>
-                  <div class="canvas canvas--code canvas--supplement">
-                    <h3>Fallback: <em>SVGeezy</em></h3>
-                    <figure class="image--screenshot image--main"><img src="img/bg/svgeezy.png" alt="SVGeezy"></figure>
-                  </div>
-                </section>
-
         <section>
           <div class="canvas canvas--code canvas--code--split">
             <div class="code-main">
@@ -304,7 +303,7 @@
           <pre><code class="css">.icon--kool-aid { background-image: url(img/kool-aid-man.svg); }</code></pre>
          </div>
           <footer class="code-footer">
-            <table class="table--centered table--bordered">
+            <table class="table--centered table--bordered fragment">
               <thead>
                 <tr class="row--mainhead">
                   <th colspan="3">Animation</th>
@@ -343,7 +342,7 @@
           <div class="canvas canvas--code canvas--supplement">
             <h3>Fallback: <em>Modernizr</em></h3>
           <pre><code class="css">.icon--kool-aid { background-image: url(img/kool-aid-man.svg); }
-.no-svg .icon--kool-aid { background-image: url(img/kool-aid-man.svg);</code></pre>
+.no-svg .icon--kool-aid { background-image: url(img/kool-aid-man.png); }</code></pre>
 
             <figure class="image--screenshot image--main">
               <img src="img/bg/modernizr.png" alt="Modernizr Screenshot">
@@ -738,13 +737,35 @@ SVGInjector(mySVGsToInject);
             <input class="time-form-am" type="radio" name="meridian" value="AM"> <label>AM</label>
             <input class="time-form-pm" type="radio" name="meridian" value="PM" checked>  <label>PM</label>
             </input>
-            <button>Submit</button>
+
             <svg id="time-widget"></svg>
           </form>
         </section>
         <section>
           <h2>Tools</h2>
         </section>
+
+        <section>
+          <h2>SVG specific libraries</h2>
+        </section>
+        <section data-background-color="#ffffff">
+          <div class="canvas">
+            <figure class="image--screenshot image--main">
+              <img src="img/bg/snap.png" alt="Snap.svg Screenshot">
+            </figure>
+            <a href="http://snapsvg.io/" class="link--external">Snap.svg</a>
+          </div>
+        </section>
+
+        <section data-background-color="#ffffff">
+          <div class="canvas">
+            <figure class="image--screenshot image--main">
+              <img src="img/bg/raphael.png" alt="Raphael.js Screenshot">
+            </figure>
+            <a href="http://raphaeljs.com/" class="link--external">Raphael.js</a>
+          </div>
+        </section>
+
         <section>
           <h2>Creating & Editing</h2>
         </section>
@@ -815,27 +836,6 @@ SVGInjector(mySVGsToInject);
           </div>
         </section>
 
-
-        <section>
-          <h2>SVG specific libraries</h2>
-        </section>
-        <section data-background-color="#ffffff">
-          <div class="canvas">
-            <figure class="image--screenshot image--main">
-              <img src="img/bg/snap.png" alt="Snap.svg Screenshot">
-            </figure>
-            <a href="http://snapsvg.io/" class="link--external">Snap.svg</a>
-          </div>
-        </section>
-
-        <section data-background-color="#ffffff">
-          <div class="canvas">
-            <figure class="image--screenshot image--main">
-              <img src="img/bg/raphael.png" alt="Raphael.js Screenshot">
-            </figure>
-            <a href="http://raphaeljs.com/" class="link--external">Raphael.js</a>
-          </div>
-        </section>
 
         <section>
           <h2>Animation Libraries</h2>
