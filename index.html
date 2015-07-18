@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/theme/base.css" id="theme">
 
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/highlightjs/github-gist.css">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -75,6 +75,14 @@
           <p><a href="http://atendesigngroup.com/about/john-ferris" class="profile-link">John Ferris</a> <span class="separator">/</span> <a href="https://twitter.com/pixel_whip" class="profile-link">@pixel_whip</a>
           <br/><a class="session-link" href="http://pixelwhip.github.io/svg-flavors/#/">http://pixelwhip.github.io/svg-flavors</a>
         </p>
+        </section>
+
+        <section>
+          <img src="img/aten.svg" width="250" height="500" alt="Aten Design Group">
+        </section>
+
+        <section>
+          <img src="img/aten-clients.png" alt="Aten's Clients">
         </section>
 
         <section>
@@ -142,9 +150,27 @@
                         type="rotate"
                         values="0 135 195; 20 135 195; 0 135 195;"
                         dur="2s"
-                        d="left-arm-up"
                         repeatCount="indefinite"
                         />  </code></pre>
+
+              <aside class="notes">Synchronized Multimedia Integration Language
+          http://www.w3.org/TR/2001/REC-smil-animation-20010904/</aside>
+            </div>
+          </div>
+</section>
+ <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man--css-animation.svg" alt="kool-aid man">
+                <pre><code class="css" data-trim>/* CSS Animation */
+@keyframes wave-hello {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(20deg);}
+}
+#left-arm {
+  animation: wave-hello 1s infinite linear alternate;
+  transform-origin: 135px 195px;
+}</code></pre>
 
               <aside class="notes">Synchronized Multimedia Integration Language
           http://www.w3.org/TR/2001/REC-smil-animation-20010904/</aside>
@@ -248,7 +274,7 @@
             <tbody>
               <tr>
                 <td><span class="answer answer--yes">Yes</span></td>
-                <td><span class="answer answer--no">No</span></td>
+                <td><span class="answer answer--yes">Yes</span></td>
                 <td><span class="answer answer--no">No</span></td>
                 <td><span class="answer answer--no">No</span></td>
                 <td><span class="answer answer--yes">Yes</span></td>
@@ -283,6 +309,8 @@
   <!--[if IE 9]></video><![endif]-->
   <img src="img/kool-aid-man.png" alt="Kool Aid Man" />
 </picture>
+
+<script src="picturefill.js"></script>
                   </code></pre>
                 </div>
 
@@ -324,7 +352,7 @@
               <tbody>
                 <tr>
                  <td><span class="answer answer--yes">Yes</span></td>
-                 <td><span class="answer answer--no">No</span></td>
+                 <td><span class="answer answer--yes">Yes</span></td>
                  <td><span class="answer answer--no">No</span></td>
                  <td><span class="answer answer--no">No</span></td>
                  <td><span class="answer answer--yes">Yes</span></td>
@@ -380,7 +408,7 @@
                         <tbody>
                           <tr>
                             <td><span class="answer answer--yes">Yes</span></td>
-                            <td><span class="answer answer--no">No</span></td>
+                            <td><span class="answer answer--yes">Yes</span></td>
                             <td><span class="answer answer--yes">Yes</span></td>
                             <td><span class="answer answer--yes">Yes</span></td>
                             <td><span class="answer answer--yes">Yes</span></td>
@@ -476,7 +504,7 @@
       <tr>
         <th><span class="code">&lt;img/&gt;</span></th>
         <td><span class="answer answer--yes">Yes</span></td>
-        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--no">No</span></td>
         <td><span class="answer answer--no">No</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
@@ -489,7 +517,7 @@
       <tr>
         <th><span class="code">background-image</span></th>
         <td><span class="answer answer--yes">Yes</span></td>
-        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--no">No</span></td>
         <td><span class="answer answer--no">No</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
@@ -502,7 +530,7 @@
       <tr>
         <th><span class="code">&lt;object/&gt;</span></th>
         <td><span class="answer answer--yes">Yes</span></td>
-        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
@@ -766,6 +794,15 @@ SVGInjector(mySVGsToInject);
           </div>
         </section>
 
+        <section data-background-color="#ffffff">
+          <div class="canvas">
+            <figure class="image--screenshot image--main">
+              <img src="img/screenshot/twojs.png" alt="Two.js Screenshot">
+            </figure>
+            <a href="https://jonobr1.github.io/two.js/#documentation" class="link--external">Two.js</a>
+          </div>
+        </section>
+
         <section>
           <h2>Creating & Editing</h2>
         </section>
@@ -896,6 +933,7 @@ SVGInjector(mySVGsToInject);
             <li><h4 class="link-heading">Sara Soueidan</h4>
               <a href="http://sarasoueidan.com/" class="link--external">http://sarasoueidan.com/</a></li>
             <li><h4 class="link-heading">CSS Tricks - A Compendium of SVG Information</h4> <a href="https://css-tricks.com/mega-list-svg-information/" class="link--external">https://css-tricks.com/mega-list-svg-information/</a></li>
+            <li><h4 class="link-heading">SVG on the Web: A Practical Guide</h4> <a href="https://svgontheweb.com/" class="link--external">https://svgontheweb.com/</a></li>
             <li><h4 class="link-heading">SVG Immersions Podcast</h4><a href="http://svgimmersion.com/" class="link--external">http://svgimmersion.com/</a></li>
           </ul>
         </section>

@@ -56,7 +56,7 @@ var Snap = Snap || null;
     /* Create indicator hand */
     function createIndicator(canvas) {
       var indicatorLine = canvas.line(150, 150, 150, 60).attr({stroke: "hotPink"});
-          indicatorEnd = canvas.circle(150, 40, 20).attr({fill: "hotPink", opacity: ".8"});
+          indicatorEnd = canvas.circle(150, 48, 20).attr({fill: "hotPink", opacity: ".8"});
           indicatorPivot = canvas.circle(150, 150, 2).attr({fill: "white"});
 
       return canvas.group(indicatorLine, indicatorEnd, indicatorPivot).attr({
@@ -201,9 +201,9 @@ var Snap = Snap || null;
     });
 
     minutesFace = new clockFace;
-    minutesFace.init('minutes', minuteOptions, minutesInput).show();
+    minutesFace.init('minutes', minuteOptions, minutesInput).hide();
     hoursFace = new clockFace;
-    hoursFace.init('hours', hourOptions, hoursInput).hide();
+    hoursFace.init('hours', hourOptions, hoursInput).show();
   };
 
   timeInputInit();
