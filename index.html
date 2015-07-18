@@ -78,6 +78,14 @@
         </section>
 
         <section>
+          <img src="img/aten.svg" width="250" height="500" alt="Aten Design Group">
+        </section>
+
+        <section>
+          <img src="img/aten-clients.png" alt="Aten's Clients">
+        </section>
+
+        <section>
           <img src="img/SVG_logo.svg" alt="SVG Logo" height="500" width="500">
           <aside class="notes">
             First and foremost a graphics format.
@@ -142,9 +150,27 @@
                         type="rotate"
                         values="0 135 195; 20 135 195; 0 135 195;"
                         dur="2s"
-                        d="left-arm-up"
                         repeatCount="indefinite"
                         />  </code></pre>
+
+              <aside class="notes">Synchronized Multimedia Integration Language
+          http://www.w3.org/TR/2001/REC-smil-animation-20010904/</aside>
+            </div>
+          </div>
+</section>
+ <section>
+          <div class="l--split">
+            <div class="l--primary" style="flex-grow: 2;">
+              <img src="img/kool-aid-man--css-animation.svg" alt="kool-aid man">
+                <pre><code class="css" data-trim>/* CSS Animation */
+@keyframes wave-hello {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(20deg);}
+}
+#left-arm {
+  animation: wave-hello 1s infinite linear alternate;
+  transform-origin: 135px 195px;
+}</code></pre>
 
               <aside class="notes">Synchronized Multimedia Integration Language
           http://www.w3.org/TR/2001/REC-smil-animation-20010904/</aside>
@@ -248,7 +274,7 @@
             <tbody>
               <tr>
                 <td><span class="answer answer--yes">Yes</span></td>
-                <td><span class="answer answer--no">No</span></td>
+                <td><span class="answer answer--yes">Yes</span></td>
                 <td><span class="answer answer--no">No</span></td>
                 <td><span class="answer answer--no">No</span></td>
                 <td><span class="answer answer--yes">Yes</span></td>
@@ -326,7 +352,7 @@
               <tbody>
                 <tr>
                  <td><span class="answer answer--yes">Yes</span></td>
-                 <td><span class="answer answer--no">No</span></td>
+                 <td><span class="answer answer--yes">Yes</span></td>
                  <td><span class="answer answer--no">No</span></td>
                  <td><span class="answer answer--no">No</span></td>
                  <td><span class="answer answer--yes">Yes</span></td>
@@ -382,7 +408,7 @@
                         <tbody>
                           <tr>
                             <td><span class="answer answer--yes">Yes</span></td>
-                            <td><span class="answer answer--no">No</span></td>
+                            <td><span class="answer answer--yes">Yes</span></td>
                             <td><span class="answer answer--yes">Yes</span></td>
                             <td><span class="answer answer--yes">Yes</span></td>
                             <td><span class="answer answer--yes">Yes</span></td>
@@ -478,7 +504,7 @@
       <tr>
         <th><span class="code">&lt;img/&gt;</span></th>
         <td><span class="answer answer--yes">Yes</span></td>
-        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--no">No</span></td>
         <td><span class="answer answer--no">No</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
@@ -491,7 +517,7 @@
       <tr>
         <th><span class="code">background-image</span></th>
         <td><span class="answer answer--yes">Yes</span></td>
-        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--no">No</span></td>
         <td><span class="answer answer--no">No</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
@@ -504,7 +530,7 @@
       <tr>
         <th><span class="code">&lt;object/&gt;</span></th>
         <td><span class="answer answer--yes">Yes</span></td>
-        <td><span class="answer answer--no">No</span></td>
+        <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
         <td><span class="answer answer--yes">Yes</span></td>
@@ -765,6 +791,15 @@ SVGInjector(mySVGsToInject);
               <img src="img/bg/raphael.png" alt="Raphael.js Screenshot">
             </figure>
             <a href="http://raphaeljs.com/" class="link--external">Raphael.js</a>
+          </div>
+        </section>
+
+        <section data-background-color="#ffffff">
+          <div class="canvas">
+            <figure class="image--screenshot image--main">
+              <img src="img/screenshot/twojs.png" alt="Two.js Screenshot">
+            </figure>
+            <a href="https://jonobr1.github.io/two.js/#documentation" class="link--external">Two.js</a>
           </div>
         </section>
 
